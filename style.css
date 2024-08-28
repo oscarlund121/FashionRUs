@@ -1,0 +1,136 @@
+/** @format */
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-color: whitesmoke;
+}
+
+nav {
+  max-width: 100%;
+  margin: auto;
+  padding: 1rem 3rem;
+  padding-right: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.nav-logo {
+  font-size: 2rem;
+}
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+}
+
+.link a {
+  position: relative;
+  padding-bottom: 0.75rem;
+  color: black;
+}
+
+.link a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transition: all 0.3s ease;
+}
+
+.link a:hover::after {
+  width: 70%;
+}
+
+h2 {
+  padding-left: 2rem;
+  font-size: 3rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: start;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: auto;
+  padding: 1rem;
+}
+
+img:hover {
+  background-color: #323232;
+  border-color: #fff;
+}
+
+.content h3 {
+  padding-top: 0.5rem;
+}
+
+.product-info {
+  color: #c0bfc0;
+  padding-top: 0.5rem;
+}
+
+.price {
+  padding-top: 0.5rem;
+  color: #b2a1b2;
+}
+
+span {
+  padding-left: 5rem;
+  color: red;
+}
+.btn,
+.btn_2 {
+  padding: 0.5rem 0.5rem;
+  margin-top: 2.7rem;
+  font-size: 0.8rem;
+  color: #fff;
+  background-color: black;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.btn:hover,
+.btn_2:hover {
+  background-color: #b2a1b2;
+}
+
+.btn_2 {
+  margin-top: 1rem;
+}
+
+.sold-out img {
+  opacity: 50%;
+}
+
+.sold-out::before {
+  content: "Sold Out";
+  position: absolute;
+  background-color: black;
+  color: white;
+  padding: 1rem;
+}
