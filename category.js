@@ -10,12 +10,12 @@ fetch("https://kea-alt-del.dk/t7/api/categories")
   .then((response) => response.json())
   .then((categories) => {
     categories.forEach((category) => {
-      categoryList.innerHTML += `<li><a href="index.html?category=${category.category}">${category.category}</a></li>`;
+      categoryList.innerHTML += `<li><a href="produktliste.html?category=${category.category}">${category.category}</a></li>`;
     });
   });
 
 if (params.has("category")) {
-  url = "https://kea-alt-del.dk/t7/api/products?category=" + category;
+  url = `https://kea-alt-del.dk/t7/api/products?category=${category}`;
 } else {
   url = "https://kea-alt-del.dk/t7/api/products";
 }
