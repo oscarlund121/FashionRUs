@@ -19,6 +19,7 @@
   outline: none;
   border: none;
   box-sizing: border-box;
+  background-color: #fff;
 }
 
 img {
@@ -44,7 +45,7 @@ body {
     max-width: 100%;
     margin: auto;
     padding: 1rem 3rem;
-    padding-right: 30%;
+    padding-right: 10%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -119,7 +120,7 @@ body {
     border: none;
     height: 2px;
     background-color: black;
-    width: 1250px;
+    width: 100%;
     align-items: center;
     margin: 0 auto;
     margin-top: 1rem;
@@ -140,7 +141,8 @@ body {
     padding-left: 0;
   }
 
-  .price {
+  .price,
+  .price-2 {
     padding-top: 0.5rem;
     color: #b2a1b2;
     font-weight: 300;
@@ -169,7 +171,7 @@ body {
     margin-top: 1rem;
   }
 
-  .sold-out img {
+  /*   .sold-out img {
     opacity: 50%;
   }
 
@@ -179,19 +181,25 @@ body {
     background-color: black;
     color: white;
     padding: 1rem;
-  }
+  } */
 
   .product-container {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     padding-top: 2rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .product-img {
+    margin-right: 1rem;
   }
 
   .mid-container {
     display: inline-block;
     margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
     color: black;
     border: 1px solid transparent;
     border-radius: 5px;
@@ -204,11 +212,19 @@ body {
     padding-top: 0;
   }
 
-  .model-container {
+  .model-container,
+  .model-container-2,
+  .model-container-3 {
     padding: 0.5rem;
   }
 
-  .product-text {
+  .product-text,
+  .product-text-2,
+  .product-text-3 {
+    padding: 1rem;
+  }
+
+  .product-head {
     padding: 1rem;
   }
 
@@ -233,26 +249,69 @@ body {
     margin-left: 1rem;
   }
 
-  .kategoriliste {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    place-items: center;
-    height: 50vh;
-    gap: 1em;
-    padding: 2rem;
+  /*  .kategoriliste {
+ 
+  } */
+
+  li {
+    list-style-type: none;
   }
 
-  .kategori-link {
-    display: flex; /* Gør det muligt at bruge flexbox til centreringsformål */
-    justify-content: center; /* Centrerer teksten horisontalt */
-    align-items: center; /* Centrerer teksten vertikalt */
-    width: 100%;
-    height: 100px;
-    background-color: #b2a1b2;
-    border-radius: 10px;
-    font-weight: 700;
-    font-size: 30px;
-    color: black;
-    padding: 5rem;
+  .soldOut {
+    filter: grayscale(1);
   }
+
+  .soldOut::before {
+    content: "Sold Out";
+    position: absolute;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+  }
+
+  .container article .discounted {
+    display: none;
+  }
+
+  .container article.onSale .discounted {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .discounted > p {
+    margin-bottom: 0;
+  }
+
+  ol {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    margin: 1rem;
+  }
+
+  ol li {
+    font-weight: 100;
+    font-size: 30px;
+    width: 100%;
+    height: 100%;
+    color: white;
+    margin: 1rem;
+    margin-top: 4rem;
+  }
+
+  ol li a {
+    color: black;
+    height: 90px;
+    width: 200px;
+  }
+
+  a span {
+    color: #323232;
+  }
+
+  /*   .kategoriliste {
+    display: flex;
+    flex-wrap: wrap;
+  }
+} */
 }
