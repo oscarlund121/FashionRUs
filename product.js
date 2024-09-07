@@ -24,7 +24,6 @@ function showProduct(product) {
   document.querySelector(".product-text-2").textContent = product.id;
   document.querySelector(".product-text-3").textContent = product.brandname;
   document.querySelector(".product-text-4").textContent = product.brandbio;
-  document.querySelector("option").textContent = product.sizefitdesc;
 }
 
 /**{
